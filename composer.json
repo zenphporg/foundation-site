@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "druidweb/druid",
+    "name": "zenphporg/foundation-site",
     "type": "project",
     "description": "A modern, opinionated starter kit for Laravel 12+ applications",
     "keywords": [

@@ -93,6 +93,7 @@ const releaseNotesGeneratorOptions = {
 
 export default {
   branches: ['+([0-9])?(.{+([0-9]),x}).x', 'main'],
+  repositoryUrl: 'https://github.com/zenphporg/foundation-site',
 
   plugins: [
     // analyze commits with conventional-changelog

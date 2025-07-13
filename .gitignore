@@ -27,3 +27,7 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+/resources/js/types/auto-imports.d.ts
+/resources/js/ziggy.d.ts
+/resources/js/ziggy.js
+/resources/js/zorah.js
