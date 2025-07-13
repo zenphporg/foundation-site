@@ -1,0 +1,35 @@
+includes:
+	- vendor/larastan/larastan/extension.neon
+	- vendor/nesbot/carbon/extension.neon
+	- phpstan-baseline.neon
+
+parameters:
+	level: max
+	paths:
+		- app/
+		- database/
+		- public/
+		- routes/
+
+	# Exclude files/directories
+	excludePaths:
+		- bootstrap/
+		- config/
+		- lang/
+		- storage/
+		- vendor/
+
+	# Laravel specific configuration
+
+	# Ignore common Laravel patterns
+	ignoreErrors:
+		# Laravel bootstrap file - framework limitation
+		- '#Cannot call method handleRequest\(\) on mixed#'
+
+		# HandleInertiaRequests return type - parent method limitation
+		- '#Method App\\Http\\Middleware\\HandleInertiaRequests\:\:share\(\) should return array\<string, mixed\> but returns array\.$#'
+
+	# Additional rules
+	checkTooWideReturnTypesInProtectedAndPublicMethods: true
+	checkUninitializedProperties: true
+	checkDynamicProperties: false

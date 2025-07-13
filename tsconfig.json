@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["./resources/js/*"],
+      "ziggy-js": ["./vendor/tightenco/ziggy"],
+      "zorah-js": ["./vendor/zenphp/zorah/dist/index.js"],
+      "zorah": ["./vendor/zenphp/zorah/dist/vue.js"]
+    },
+    "types": ["vite/client", "@vue/runtime-core", "./resources/js/types"],
+    "resolveJsonModule": true,
+
+    "allowJs": true,
+    "sourceMap": true,
+    "noEmit": true,
+
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["resources/js/**/*.ts", "resources/js/**/*.d.ts", "resources/js/**/*.tsx", "resources/js/**/*.vue"]
+}
