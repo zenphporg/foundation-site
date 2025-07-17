@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.1](https://github.com/zenphporg/foundation-site/compare/v1.0.0...v1.0.1) (2025-07-17)
+
+
+### Bug Fixes
+
+* make head title dynamic ([2492f6c](https://github.com/zenphporg/foundation-site/commit/2492f6c3b7fdb3ed0650938cae1a712885d7f55a))
+
+
+### Maintenance
+
+* **deps:** bump @rollup/rollup-linux-x64-gnu from 4.44.2 to 4.45.0 ([#1](https://github.com/zenphporg/foundation-site/issues/1)) ([4eb35c8](https://github.com/zenphporg/foundation-site/commit/4eb35c886c3320a6c6814f83ea35b3ac57b41651))
+* fix missing lang var ([531e345](https://github.com/zenphporg/foundation-site/commit/531e34512906b4575febd635a07a03ca24a5f59b))
+
 # 1.0.0 (2025-07-13)
 
 
