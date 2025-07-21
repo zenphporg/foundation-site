@@ -7661,16 +7661,16 @@
         },
         {
             "name": "druidweb/coming-soon",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/druidweb/coming-soon.git",
-                "reference": "33f1713946596ff6906f2f417a8d29aeaf106230"
+                "reference": "96a602edca4b3ccbd735f1df6d761d33d2e951db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/druidweb/coming-soon/zipball/33f1713946596ff6906f2f417a8d29aeaf106230",
-                "reference": "33f1713946596ff6906f2f417a8d29aeaf106230",
+                "url": "https://api.github.com/repos/druidweb/coming-soon/zipball/96a602edca4b3ccbd735f1df6d761d33d2e951db",
+                "reference": "96a602edca4b3ccbd735f1df6d761d33d2e951db",
                 "shasum": ""
             },
             "require-dev": {
@@ -7705,9 +7705,9 @@
             "description": "Coming soon page and image publisher for Jetstream Labs projects.",
             "support": {
                 "issues": "https://github.com/druidweb/coming-soon/issues",
-                "source": "https://github.com/druidweb/coming-soon/tree/v1.0.4"
+                "source": "https://github.com/druidweb/coming-soon/tree/v1.0.5"
             },
-            "time": "2025-07-17T06:17:32+00:00"
+            "time": "2025-07-17T07:46:45+00:00"
         },
         {
             "name": "fakerphp/faker",
