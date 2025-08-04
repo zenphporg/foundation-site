@@ -31,7 +31,7 @@
     "concurrently": "^9.2.0",
     "laravel-echo": "^2.1.6",
     "laravel-vite-plugin": "^2.0.0",
-    "lucide": "^0.525.0",
+    "lucide": "^0.536.0",
     "lucide-vue-next": "^0.525.0",
     "pinia": "^3.0.3",
     "postcss-import": "^16.1.1",
