@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.2](https://github.com/zenphporg/foundation-site/compare/v1.0.1...v1.0.2) (2025-10-23)
+
+
+### Code Refactoring
+
+* update assets and tests ([42c24d2](https://github.com/zenphporg/foundation-site/commit/42c24d2b05a81c447097eff3e4cb97b7156f9c94))
+* update dep pull requests ([026edc8](https://github.com/zenphporg/foundation-site/commit/026edc8049fdf4505ce59ce5d78af6315badf67f))
+
+
+### Maintenance
+
+* **deps-dev:** bump druidweb/coming-soon from 1.0.3 to 1.0.4 ([#2](https://github.com/zenphporg/foundation-site/issues/2)) ([874919a](https://github.com/zenphporg/foundation-site/commit/874919adfa8b693920401cef4aa5ffc273216177))
+* **deps-dev:** bump druidweb/coming-soon from 1.0.4 to 1.0.5 ([9d66611](https://github.com/zenphporg/foundation-site/commit/9d6661143331a3d3f2b395f58000497b68741753))
+* **deps-dev:** bump druidweb/coming-soon from 1.0.4 to 1.0.5 ([#5](https://github.com/zenphporg/foundation-site/issues/5)) ([d876d2f](https://github.com/zenphporg/foundation-site/commit/d876d2f3c77e2849e27b7cea78fd8e6dce90b935))
+* **deps:** bump @rollup/rollup-linux-x64-gnu from 4.45.0 to 4.45.1 ([#3](https://github.com/zenphporg/foundation-site/issues/3)) ([382d956](https://github.com/zenphporg/foundation-site/commit/382d956b20f76c0da62b4c04a03cbf21063abbe6))
+
 ## [1.0.1](https://github.com/zenphporg/foundation-site/compare/v1.0.0...v1.0.1) (2025-07-17)
 
 
