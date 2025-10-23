@@ -11,26 +11,26 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
-        "inertiajs/inertia-laravel": "^2.0.2",
-        "laravel/framework": "^12.9.0",
-        "laravel/sanctum": "^4.0.8",
+        "inertiajs/inertia-laravel": "^2.0.10",
+        "laravel/framework": "^12.35.0",
+        "laravel/sanctum": "^4.2.0",
         "laravel/tinker": "^2.10.1",
-        "predis/predis": "^3.0.1",
+        "predis/predis": "^3.02.0",
         "pusher/pusher-php-server": "^7.2.7",
-        "tightenco/ziggy": "^2.5.2",
-        "zenphp/modulr": "^1.0"
+        "tightenco/ziggy": "^2.6.0",
+        "zenphp/modulr": "^1.0.12"
     },
     "require-dev": {
         "druidweb/coming-soon": "^1.0",
         "fakerphp/faker": "^1.24.1",
-        "larastan/larastan": "^3.4",
+        "larastan/larastan": "^3.7.2",
         "mockery/mockery": "^1.6.12",
-        "nunomaduro/collision": "^8.8.0",
-        "pestphp/pest": "^3.8",
-        "pestphp/pest-plugin-laravel": "^3.2",
-        "rector/rector": "^2.1",
+        "nunomaduro/collision": "^8.8.2",
+        "pestphp/pest": "^3.8.4",
+        "pestphp/pest-plugin-laravel": "^3.2.0",
+        "rector/rector": "^2.2.5",
         "zenphp/fixr": "^1.0.3",
-        "zenphp/zorah": "^1.0"
+        "zenphp/zorah": "^1.0.5"
     },
     "autoload": {
         "psr-4": {
