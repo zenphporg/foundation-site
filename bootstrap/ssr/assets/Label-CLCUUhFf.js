@@ -1,6 +1,6 @@
 import { defineComponent, mergeProps, useSSRContext, computed, unref, withCtx, renderSlot } from "vue";
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent, ssrRenderSlot } from "vue/server-renderer";
-import { c as cn } from "./AppLogoIcon-DBADkq_3.js";
+import { c as cn } from "./AppLogoIcon-C4Tc7rVh.js";
 import { Label } from "reka-ui";
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "InputError",
@@ -10,9 +10,9 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({
-        style: _ctx.message ? null : { display: "none" }
-      }, _attrs))}><p class="text-sm text-red-600 dark:text-red-500">${ssrInterpolate(_ctx.message)}</p></div>`);
+      _push(`<div${ssrRenderAttrs(mergeProps(_attrs, {
+        style: __props.message ? null : { display: "none" }
+      }))}><p class="text-sm text-red-600 dark:text-red-500">${ssrInterpolate(__props.message)}</p></div>`);
     };
   }
 });
@@ -28,7 +28,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
     for: {},
     asChild: { type: Boolean },
-    as: { type: [String, Object, Function] },
+    as: {},
     class: {}
   },
   setup(__props) {

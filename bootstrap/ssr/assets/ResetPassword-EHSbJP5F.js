@@ -1,13 +1,12 @@
 import { defineComponent, mergeProps, withCtx, unref, createTextVNode, createBlock, createCommentVNode, openBlock, createVNode, withModifiers, useSSRContext } from "vue";
 import { ssrRenderComponent } from "vue/server-renderer";
-import { _ as _sfc_main$2, a as _sfc_main$4 } from "./Label-CHHcxqKF.js";
-import { _ as _sfc_main$6 } from "./TextLink-DF2ChrHZ.js";
-import { _ as _sfc_main$5 } from "./AppLogoIcon-DBADkq_3.js";
-import { _ as _sfc_main$3 } from "./Input-DT0skB6D.js";
-import { _ as _sfc_main$1 } from "./AuthLayout-B9Y6kz4d.js";
+import { _ as _sfc_main$2, a as _sfc_main$4 } from "./Label-CLCUUhFf.js";
+import { _ as _sfc_main$5 } from "./AppLogoIcon-C4Tc7rVh.js";
+import { _ as _sfc_main$3 } from "./Input-3aSIPFbK.js";
+import { u as useRoutes } from "./useRoutes-C6epjGj-.js";
+import { _ as _sfc_main$1 } from "./AuthLayout-DzydXXdD.js";
 import { useForm, Head } from "@inertiajs/vue3";
 import { LoaderCircle } from "lucide-vue-next";
-import { u as useRoutes } from "./useRoutes-JSS26hLF.js";
 import "reka-ui";
 import "class-variance-authority";
 import "clsx";
@@ -17,63 +16,43 @@ import "../ssr.js";
 import "@inertiajs/vue3/server";
 import "@vue/server-renderer";
 const _sfc_main = /* @__PURE__ */ defineComponent({
-  __name: "Register",
+  __name: "ResetPassword",
   __ssrInlineRender: true,
+  props: {
+    token: {},
+    email: {}
+  },
   setup(__props) {
+    const props = __props;
     const form = useForm({
-      name: "",
-      email: "",
+      token: props.token,
+      email: props.email,
       password: "",
       password_confirmation: ""
     });
     const submit = () => {
-      form.post(useRoutes("register"), {
-        onFinish: () => form.reset("password", "password_confirmation")
+      form.post(useRoutes("password.store"), {
+        onFinish: () => {
+          form.reset("password", "password_confirmation");
+        }
       });
     };
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(_sfc_main$1, mergeProps({
-        title: "Create an account",
-        description: "Enter your details below to create your account"
+        title: "Reset password",
+        description: "Please enter your new password below"
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(Head), { title: "Register" }, null, _parent2, _scopeId));
-            _push2(`<form class="flex flex-col gap-6"${_scopeId}><div class="grid gap-6"${_scopeId}><div class="grid gap-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "name" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`Name`);
-                } else {
-                  return [
-                    createTextVNode("Name")
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
-              id: "name",
-              type: "text",
-              required: "",
-              autofocus: "",
-              tabindex: 1,
-              autocomplete: "name",
-              modelValue: unref(form).name,
-              "onUpdate:modelValue": ($event) => unref(form).name = $event,
-              placeholder: "Full name"
-            }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$4, {
-              message: unref(form).errors.name
-            }, null, _parent2, _scopeId));
-            _push2(`</div><div class="grid gap-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(Head), { title: "Reset password" }, null, _parent2, _scopeId));
+            _push2(`<form${_scopeId}><div class="grid gap-6"${_scopeId}><div class="grid gap-2"${_scopeId}>`);
             _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "email" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`Email address`);
+                  _push3(`Email`);
                 } else {
                   return [
-                    createTextVNode("Email address")
+                    createTextVNode("Email")
                   ];
                 }
               }),
@@ -82,15 +61,16 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(unref(_sfc_main$3), {
               id: "email",
               type: "email",
-              required: "",
-              tabindex: 2,
+              name: "email",
               autocomplete: "email",
               modelValue: unref(form).email,
               "onUpdate:modelValue": ($event) => unref(form).email = $event,
-              placeholder: "email@example.com"
+              class: "mt-1 block w-full",
+              readonly: ""
             }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_sfc_main$4, {
-              message: unref(form).errors.email
+              message: unref(form).errors.email,
+              class: "mt-2"
             }, null, _parent2, _scopeId));
             _push2(`</div><div class="grid gap-2"${_scopeId}>`);
             _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "password" }, {
@@ -108,11 +88,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(unref(_sfc_main$3), {
               id: "password",
               type: "password",
-              required: "",
-              tabindex: 3,
+              name: "password",
               autocomplete: "new-password",
               modelValue: unref(form).password,
               "onUpdate:modelValue": ($event) => unref(form).password = $event,
+              class: "mt-1 block w-full",
+              autofocus: "",
               placeholder: "Password"
             }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_sfc_main$4, {
@@ -122,10 +103,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "password_confirmation" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`Confirm password`);
+                  _push3(` Confirm Password `);
                 } else {
                   return [
-                    createTextVNode("Confirm password")
+                    createTextVNode(" Confirm Password ")
                   ];
                 }
               }),
@@ -134,11 +115,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(unref(_sfc_main$3), {
               id: "password_confirmation",
               type: "password",
-              required: "",
-              tabindex: 4,
+              name: "password_confirmation",
               autocomplete: "new-password",
               modelValue: unref(form).password_confirmation,
               "onUpdate:modelValue": ($event) => unref(form).password_confirmation = $event,
+              class: "mt-1 block w-full",
               placeholder: "Confirm password"
             }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_sfc_main$4, {
@@ -147,8 +128,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(`</div>`);
             _push2(ssrRenderComponent(unref(_sfc_main$5), {
               type: "submit",
-              class: "mt-2 w-full",
-              tabindex: "5",
+              class: "mt-4 w-full",
               disabled: unref(form).processing
             }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
@@ -158,31 +138,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   } else {
                     _push3(`<!---->`);
                   }
-                  _push3(` Create account `);
+                  _push3(` Reset password `);
                 } else {
                   return [
                     unref(form).processing ? (openBlock(), createBlock(unref(LoaderCircle), {
                       key: 0,
                       class: "h-4 w-4 animate-spin"
                     })) : createCommentVNode("", true),
-                    createTextVNode(" Create account ")
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(`</div><div class="text-muted-foreground text-center text-sm"${_scopeId}> Already have an account? `);
-            _push2(ssrRenderComponent(_sfc_main$6, {
-              href: _ctx.route("login"),
-              class: "underline underline-offset-4",
-              tabindex: 6
-            }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`Log in`);
-                } else {
-                  return [
-                    createTextVNode("Log in")
+                    createTextVNode(" Reset password ")
                   ];
                 }
               }),
@@ -191,53 +154,31 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(`</div></form>`);
           } else {
             return [
-              createVNode(unref(Head), { title: "Register" }),
+              createVNode(unref(Head), { title: "Reset password" }),
               createVNode("form", {
-                onSubmit: withModifiers(submit, ["prevent"]),
-                class: "flex flex-col gap-6"
+                onSubmit: withModifiers(submit, ["prevent"])
               }, [
                 createVNode("div", { class: "grid gap-6" }, [
                   createVNode("div", { class: "grid gap-2" }, [
-                    createVNode(unref(_sfc_main$2), { for: "name" }, {
-                      default: withCtx(() => [
-                        createTextVNode("Name")
-                      ]),
-                      _: 1
-                    }),
-                    createVNode(unref(_sfc_main$3), {
-                      id: "name",
-                      type: "text",
-                      required: "",
-                      autofocus: "",
-                      tabindex: 1,
-                      autocomplete: "name",
-                      modelValue: unref(form).name,
-                      "onUpdate:modelValue": ($event) => unref(form).name = $event,
-                      placeholder: "Full name"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    createVNode(_sfc_main$4, {
-                      message: unref(form).errors.name
-                    }, null, 8, ["message"])
-                  ]),
-                  createVNode("div", { class: "grid gap-2" }, [
                     createVNode(unref(_sfc_main$2), { for: "email" }, {
                       default: withCtx(() => [
-                        createTextVNode("Email address")
+                        createTextVNode("Email")
                       ]),
                       _: 1
                     }),
                     createVNode(unref(_sfc_main$3), {
                       id: "email",
                       type: "email",
-                      required: "",
-                      tabindex: 2,
+                      name: "email",
                       autocomplete: "email",
                       modelValue: unref(form).email,
                       "onUpdate:modelValue": ($event) => unref(form).email = $event,
-                      placeholder: "email@example.com"
+                      class: "mt-1 block w-full",
+                      readonly: ""
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
                     createVNode(_sfc_main$4, {
-                      message: unref(form).errors.email
+                      message: unref(form).errors.email,
+                      class: "mt-2"
                     }, null, 8, ["message"])
                   ]),
                   createVNode("div", { class: "grid gap-2" }, [
@@ -250,11 +191,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     createVNode(unref(_sfc_main$3), {
                       id: "password",
                       type: "password",
-                      required: "",
-                      tabindex: 3,
+                      name: "password",
                       autocomplete: "new-password",
                       modelValue: unref(form).password,
                       "onUpdate:modelValue": ($event) => unref(form).password = $event,
+                      class: "mt-1 block w-full",
+                      autofocus: "",
                       placeholder: "Password"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
                     createVNode(_sfc_main$4, {
@@ -264,18 +206,18 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   createVNode("div", { class: "grid gap-2" }, [
                     createVNode(unref(_sfc_main$2), { for: "password_confirmation" }, {
                       default: withCtx(() => [
-                        createTextVNode("Confirm password")
+                        createTextVNode(" Confirm Password ")
                       ]),
                       _: 1
                     }),
                     createVNode(unref(_sfc_main$3), {
                       id: "password_confirmation",
                       type: "password",
-                      required: "",
-                      tabindex: 4,
+                      name: "password_confirmation",
                       autocomplete: "new-password",
                       modelValue: unref(form).password_confirmation,
                       "onUpdate:modelValue": ($event) => unref(form).password_confirmation = $event,
+                      class: "mt-1 block w-full",
                       placeholder: "Confirm password"
                     }, null, 8, ["modelValue", "onUpdate:modelValue"]),
                     createVNode(_sfc_main$4, {
@@ -284,8 +226,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   ]),
                   createVNode(unref(_sfc_main$5), {
                     type: "submit",
-                    class: "mt-2 w-full",
-                    tabindex: "5",
+                    class: "mt-4 w-full",
                     disabled: unref(form).processing
                   }, {
                     default: withCtx(() => [
@@ -293,23 +234,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         key: 0,
                         class: "h-4 w-4 animate-spin"
                       })) : createCommentVNode("", true),
-                      createTextVNode(" Create account ")
+                      createTextVNode(" Reset password ")
                     ]),
                     _: 1
                   }, 8, ["disabled"])
-                ]),
-                createVNode("div", { class: "text-muted-foreground text-center text-sm" }, [
-                  createTextVNode(" Already have an account? "),
-                  createVNode(_sfc_main$6, {
-                    href: _ctx.route("login"),
-                    class: "underline underline-offset-4",
-                    tabindex: 6
-                  }, {
-                    default: withCtx(() => [
-                      createTextVNode("Log in")
-                    ]),
-                    _: 1
-                  }, 8, ["href"])
                 ])
               ], 32)
             ];
@@ -323,7 +251,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/pages/auth/Register.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/pages/auth/ResetPassword.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 export {

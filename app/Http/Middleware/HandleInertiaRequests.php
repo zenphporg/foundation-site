@@ -44,7 +44,7 @@ final class HandleInertiaRequests extends Middleware
     $quoteString = is_string($randomQuote) ? $randomQuote : '';
     [$message, $author] = str($quoteString)->explode('-');
 
-    return array_merge(parent::share($request), [
+    return [
       ...parent::share($request),
       'name' => config('app.name'),
       'quote' => [
@@ -54,6 +54,6 @@ final class HandleInertiaRequests extends Middleware
       'auth' => [
         'user' => $request->user(),
       ],
-    ]);
+    ];
   }
 }

@@ -1,7 +1,7 @@
 import { defineComponent, useSSRContext, mergeProps, unref, withCtx, createTextVNode, toDisplayString, createVNode } from "vue";
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent, ssrRenderList, ssrRenderSlot } from "vue/server-renderer";
-import { _ as _sfc_main$3 } from "./AppLogoIcon-DBADkq_3.js";
-import { a as _sfc_main$4 } from "./AppLayout-4V3vKB4P.js";
+import { _ as _sfc_main$3 } from "./AppLogoIcon-C4Tc7rVh.js";
+import { a as _sfc_main$4 } from "./AppLayout-f6fI2LDL.js";
 import { usePage, Link } from "@inertiajs/vue3";
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "HeadingSmall",
@@ -12,9 +12,9 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<header${ssrRenderAttrs(_attrs)}><h3 class="mb-0.5 text-base font-medium">${ssrInterpolate(_ctx.title)}</h3>`);
-      if (_ctx.description) {
-        _push(`<p class="text-muted-foreground text-sm">${ssrInterpolate(_ctx.description)}</p>`);
+      _push(`<header${ssrRenderAttrs(_attrs)}><h3 class="mb-0.5 text-base font-medium">${ssrInterpolate(__props.title)}</h3>`);
+      if (__props.description) {
+        _push(`<p class="text-muted-foreground text-sm">${ssrInterpolate(__props.description)}</p>`);
       } else {
         _push(`<!---->`);
       }
@@ -37,9 +37,9 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "mb-8 space-y-0.5" }, _attrs))}><h2 class="text-xl font-semibold tracking-tight">${ssrInterpolate(_ctx.title)}</h2>`);
-      if (_ctx.description) {
-        _push(`<p class="text-muted-foreground text-sm">${ssrInterpolate(_ctx.description)}</p>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "mb-8 space-y-0.5" }, _attrs))}><h2 class="text-xl font-semibold tracking-tight">${ssrInterpolate(__props.title)}</h2>`);
+      if (__props.description) {
+        _push(`<p class="text-muted-foreground text-sm">${ssrInterpolate(__props.description)}</p>`);
       } else {
         _push(`<!---->`);
       }
@@ -57,7 +57,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "Layout",
   __ssrInlineRender: true,
   setup(__props) {
-    var _a;
     const sidebarNavItems = [
       {
         title: "Profile",
@@ -73,7 +72,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
     ];
     const page = usePage();
-    const currentPath = ((_a = page.props.ziggy) == null ? void 0 : _a.location) ? new URL(page.props.ziggy.location).pathname : "";
+    const currentPath = page.props.ziggy?.location ? new URL(page.props.ziggy.location).pathname : "";
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "px-4 py-6" }, _attrs))}>`);
       _push(ssrRenderComponent(_sfc_main$1, {

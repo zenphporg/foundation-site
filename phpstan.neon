@@ -26,9 +26,6 @@ parameters:
 		# Laravel bootstrap file - framework limitation
 		- '#Cannot call method handleRequest\(\) on mixed#'
 
-		# HandleInertiaRequests return type - parent method limitation
-		- '#Method App\\Http\\Middleware\\HandleInertiaRequests\:\:share\(\) should return array\<string, mixed\> but returns array\.$#'
-
 	# Additional rules
 	checkTooWideReturnTypesInProtectedAndPublicMethods: true
 	checkUninitializedProperties: true

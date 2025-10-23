@@ -1,21 +1,21 @@
 import { defineComponent, ref, mergeProps, withCtx, unref, createTextVNode, createVNode, withModifiers, Transition, withDirectives, vShow, useSSRContext } from "vue";
 import { ssrRenderComponent, ssrRenderStyle } from "vue/server-renderer";
-import { _ as _sfc_main$4, a as _sfc_main$6 } from "./Label-CHHcxqKF.js";
-import { _ as _sfc_main$1 } from "./AppLayout-4V3vKB4P.js";
-import { _ as _sfc_main$2, a as _sfc_main$3 } from "./Layout-Bwv-8V8S.js";
+import { _ as _sfc_main$4, a as _sfc_main$6 } from "./Label-CLCUUhFf.js";
+import { u as useRoutes } from "./useRoutes-C6epjGj-.js";
+import { _ as _sfc_main$1 } from "./AppLayout-f6fI2LDL.js";
+import { _ as _sfc_main$2, a as _sfc_main$3 } from "./Layout-B63bVgt6.js";
 import { useForm, Head } from "@inertiajs/vue3";
-import { _ as _sfc_main$7 } from "./AppLogoIcon-DBADkq_3.js";
-import { _ as _sfc_main$5 } from "./Input-DT0skB6D.js";
-import { u as useRoutes } from "./useRoutes-JSS26hLF.js";
+import { _ as _sfc_main$7 } from "./AppLogoIcon-C4Tc7rVh.js";
+import { _ as _sfc_main$5 } from "./Input-3aSIPFbK.js";
 import "reka-ui";
+import "../ssr.js";
+import "@inertiajs/vue3/server";
+import "@vue/server-renderer";
 import "class-variance-authority";
 import "@vueuse/core";
 import "lucide-vue-next";
 import "clsx";
 import "tailwind-merge";
-import "../ssr.js";
-import "@inertiajs/vue3/server";
-import "@vue/server-renderer";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "Password",
   __ssrInlineRender: true,
@@ -160,7 +160,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(`<p style="${ssrRenderStyle(unref(form).recentlySuccessful ? null : { display: "none" })}" class="text-sm text-neutral-600"${_scopeId2}>Saved.</p></div></form></div>`);
+                  _push3(`<p class="text-sm text-neutral-600" style="${ssrRenderStyle(unref(form).recentlySuccessful ? null : { display: "none" })}"${_scopeId2}>Saved.</p></div></form></div>`);
                 } else {
                   return [
                     createVNode("div", { class: "space-y-6" }, [

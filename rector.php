@@ -21,8 +21,7 @@ return RectorConfig::configure()
     privatization: true,
     naming: true,
     earlyReturn: true,
-    instanceOf: true,
-    strictBooleans: true
+    instanceOf: true
   )
   ->withPhpSets(php84: true)
   ->withRules([

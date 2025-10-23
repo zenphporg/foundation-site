@@ -1,6 +1,6 @@
 import { defineComponent, mergeProps, unref, withCtx, createVNode, createTextVNode, toDisplayString, useSSRContext, renderSlot } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderSlot } from "vue/server-renderer";
-import { a as _sfc_main$2 } from "./AppLogoIcon-DBADkq_3.js";
+import { a as _sfc_main$2 } from "./AppLogoIcon-C4Tc7rVh.js";
 import { usePage, Link } from "@inertiajs/vue3";
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "AuthSplitLayout",
@@ -38,13 +38,13 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         _push(`<!---->`);
       }
       _push(`</div><div class="lg:p-8"><div class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]"><div class="flex flex-col space-y-2 text-center">`);
-      if (_ctx.title) {
-        _push(`<h1 class="text-xl font-medium tracking-tight">${ssrInterpolate(_ctx.title)}</h1>`);
+      if (__props.title) {
+        _push(`<h1 class="text-xl font-medium tracking-tight">${ssrInterpolate(__props.title)}</h1>`);
       } else {
         _push(`<!---->`);
       }
-      if (_ctx.description) {
-        _push(`<p class="text-muted-foreground text-sm">${ssrInterpolate(_ctx.description)}</p>`);
+      if (__props.description) {
+        _push(`<p class="text-muted-foreground text-sm">${ssrInterpolate(__props.description)}</p>`);
       } else {
         _push(`<!---->`);
       }
@@ -70,8 +70,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(_sfc_main$1, mergeProps({
-        title: _ctx.title,
-        description: _ctx.description
+        title: __props.title,
+        description: __props.description
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

@@ -1,11 +1,11 @@
 import { defineComponent, mergeProps, withCtx, unref, createBlock, createCommentVNode, createTextVNode, openBlock, createVNode, withModifiers, useSSRContext } from "vue";
 import { ssrRenderComponent } from "vue/server-renderer";
-import { _ as _sfc_main$3 } from "./TextLink-DF2ChrHZ.js";
-import { _ as _sfc_main$2 } from "./AppLogoIcon-DBADkq_3.js";
-import { _ as _sfc_main$1 } from "./AuthLayout-B9Y6kz4d.js";
+import { _ as _sfc_main$3 } from "./TextLink-DTyK6a-s.js";
+import { _ as _sfc_main$2 } from "./AppLogoIcon-C4Tc7rVh.js";
+import { u as useRoutes } from "./useRoutes-C6epjGj-.js";
+import { _ as _sfc_main$1 } from "./AuthLayout-DzydXXdD.js";
 import { useForm, Head } from "@inertiajs/vue3";
 import { LoaderCircle } from "lucide-vue-next";
-import { u as useRoutes } from "./useRoutes-JSS26hLF.js";
 import "class-variance-authority";
 import "clsx";
 import "tailwind-merge";
@@ -32,7 +32,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(unref(Head), { title: "Email verification" }, null, _parent2, _scopeId));
-            if (_ctx.status === "verification-link-sent") {
+            if (__props.status === "verification-link-sent") {
               _push2(`<div class="mb-4 text-center text-sm font-medium text-green-600"${_scopeId}> A new verification link has been sent to the email address you provided during registration. </div>`);
             } else {
               _push2(`<!---->`);
@@ -83,7 +83,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           } else {
             return [
               createVNode(unref(Head), { title: "Email verification" }),
-              _ctx.status === "verification-link-sent" ? (openBlock(), createBlock("div", {
+              __props.status === "verification-link-sent" ? (openBlock(), createBlock("div", {
                 key: 0,
                 class: "mb-4 text-center text-sm font-medium text-green-600"
               }, " A new verification link has been sent to the email address you provided during registration. ")) : createCommentVNode("", true),

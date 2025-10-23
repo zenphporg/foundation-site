@@ -1,13 +1,13 @@
 import { defineComponent, mergeProps, withCtx, unref, createTextVNode, createBlock, createCommentVNode, openBlock, createVNode, toDisplayString, withModifiers, useSSRContext } from "vue";
 import { ssrRenderComponent, ssrInterpolate } from "vue/server-renderer";
-import { _ as _sfc_main$2, a as _sfc_main$4 } from "./Label-CHHcxqKF.js";
-import { _ as _sfc_main$6 } from "./TextLink-DF2ChrHZ.js";
-import { _ as _sfc_main$5 } from "./AppLogoIcon-DBADkq_3.js";
-import { _ as _sfc_main$3 } from "./Input-DT0skB6D.js";
-import { _ as _sfc_main$1 } from "./AuthLayout-B9Y6kz4d.js";
+import { _ as _sfc_main$2, a as _sfc_main$4 } from "./Label-CLCUUhFf.js";
+import { _ as _sfc_main$6 } from "./TextLink-DTyK6a-s.js";
+import { _ as _sfc_main$5 } from "./AppLogoIcon-C4Tc7rVh.js";
+import { _ as _sfc_main$3 } from "./Input-3aSIPFbK.js";
+import { u as useRoutes } from "./useRoutes-C6epjGj-.js";
+import { _ as _sfc_main$1 } from "./AuthLayout-DzydXXdD.js";
 import { useForm, Head } from "@inertiajs/vue3";
 import { LoaderCircle } from "lucide-vue-next";
-import { u as useRoutes } from "./useRoutes-JSS26hLF.js";
 import "reka-ui";
 import "class-variance-authority";
 import "clsx";
@@ -37,8 +37,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(unref(Head), { title: "Forgot password" }, null, _parent2, _scopeId));
-            if (_ctx.status) {
-              _push2(`<div class="mb-4 text-center text-sm font-medium text-green-600"${_scopeId}>${ssrInterpolate(_ctx.status)}</div>`);
+            if (__props.status) {
+              _push2(`<div class="mb-4 text-center text-sm font-medium text-green-600"${_scopeId}>${ssrInterpolate(__props.status)}</div>`);
             } else {
               _push2(`<!---->`);
             }
@@ -112,10 +112,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           } else {
             return [
               createVNode(unref(Head), { title: "Forgot password" }),
-              _ctx.status ? (openBlock(), createBlock("div", {
+              __props.status ? (openBlock(), createBlock("div", {
                 key: 0,
                 class: "mb-4 text-center text-sm font-medium text-green-600"
-              }, toDisplayString(_ctx.status), 1)) : createCommentVNode("", true),
+              }, toDisplayString(__props.status), 1)) : createCommentVNode("", true),
               createVNode("div", { class: "space-y-6" }, [
                 createVNode("form", {
                   onSubmit: withModifiers(submit, ["prevent"])

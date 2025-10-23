@@ -1,14 +1,14 @@
 import { defineComponent, unref, mergeProps, withCtx, renderSlot, useSSRContext, computed, createVNode, ref, createTextVNode, withModifiers, createBlock, createCommentVNode, openBlock, Transition, withDirectives, vShow } from "vue";
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderStyle } from "vue/server-renderer";
 import { useForm, usePage, Head, Link } from "@inertiajs/vue3";
-import { a as _sfc_main$c, _ as _sfc_main$i } from "./Layout-Bwv-8V8S.js";
-import { _ as _sfc_main$e, a as _sfc_main$g } from "./Label-CHHcxqKF.js";
-import { c as cn, _ as _sfc_main$d } from "./AppLogoIcon-DBADkq_3.js";
+import { a as _sfc_main$c, _ as _sfc_main$i } from "./Layout-B63bVgt6.js";
+import { _ as _sfc_main$e, a as _sfc_main$g } from "./Label-CLCUUhFf.js";
+import { c as cn, _ as _sfc_main$d } from "./AppLogoIcon-C4Tc7rVh.js";
 import { useForwardPropsEmits, DialogRoot, DialogClose, DialogOverlay, DialogPortal, DialogContent, useForwardProps, DialogDescription, DialogTitle, DialogTrigger } from "reka-ui";
 import { X } from "lucide-vue-next";
-import { _ as _sfc_main$f } from "./Input-DT0skB6D.js";
-import { u as useRoutes } from "./useRoutes-JSS26hLF.js";
-import { _ as _sfc_main$h } from "./AppLayout-4V3vKB4P.js";
+import { _ as _sfc_main$f } from "./Input-3aSIPFbK.js";
+import { u as useRoutes } from "./useRoutes-C6epjGj-.js";
+import { _ as _sfc_main$h } from "./AppLayout-f6fI2LDL.js";
 import "class-variance-authority";
 import "clsx";
 import "tailwind-merge";
@@ -56,7 +56,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   props: {
     asChild: { type: Boolean },
-    as: { type: [String, Object, Function] }
+    as: {}
   },
   setup(__props) {
     const props = __props;
@@ -88,7 +88,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   props: {
     forceMount: { type: Boolean },
     asChild: { type: Boolean },
-    as: { type: [String, Object, Function] },
+    as: {},
     class: {}
   },
   setup(__props) {
@@ -129,10 +129,9 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   props: {
     forceMount: { type: Boolean },
-    trapFocus: { type: Boolean },
     disableOutsidePointerEvents: { type: Boolean },
     asChild: { type: Boolean },
-    as: { type: [String, Object, Function] },
+    as: {},
     class: {}
   },
   emits: ["escapeKeyDown", "pointerDownOutside", "focusOutside", "interactOutside", "openAutoFocus", "closeAutoFocus"],
@@ -227,7 +226,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   props: {
     asChild: { type: Boolean },
-    as: { type: [String, Object, Function] },
+    as: {},
     class: {}
   },
   setup(__props) {
@@ -314,10 +313,9 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   props: {
     forceMount: { type: Boolean },
-    trapFocus: { type: Boolean },
     disableOutsidePointerEvents: { type: Boolean },
     asChild: { type: Boolean },
-    as: { type: [String, Object, Function] },
+    as: {},
     class: {}
   },
   emits: ["escapeKeyDown", "pointerDownOutside", "focusOutside", "interactOutside", "openAutoFocus", "closeAutoFocus"],
@@ -467,7 +465,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   props: {
     asChild: { type: Boolean },
-    as: { type: [String, Object, Function] },
+    as: {},
     class: {}
   },
   setup(__props) {
@@ -506,7 +504,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   props: {
     asChild: { type: Boolean },
-    as: { type: [String, Object, Function] }
+    as: {}
   },
   setup(__props) {
     const props = __props;
@@ -545,10 +543,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       form.delete(useRoutes("profile.destroy"), {
         preserveScroll: true,
         onSuccess: () => closeModal(),
-        onError: () => {
-          var _a;
-          return (_a = passwordInput.value) == null ? void 0 : _a.focus();
-        },
+        onError: () => passwordInput.value?.focus(),
         onFinish: () => form.reset()
       });
     };
@@ -1037,7 +1032,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     message: unref(form).errors.email
                   }, null, _parent3, _scopeId2));
                   _push3(`</div>`);
-                  if (_ctx.mustVerifyEmail && !unref(user).email_verified_at) {
+                  if (__props.mustVerifyEmail && !unref(user).email_verified_at) {
                     _push3(`<div${_scopeId2}><p class="text-muted-foreground -mt-4 text-sm"${_scopeId2}> Your email address is unverified. `);
                     _push3(ssrRenderComponent(unref(Link), {
                       href: _ctx.route("verification.send"),
@@ -1057,7 +1052,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                       _: 1
                     }, _parent3, _scopeId2));
                     _push3(`</p>`);
-                    if (_ctx.status === "verification-link-sent") {
+                    if (__props.status === "verification-link-sent") {
                       _push3(`<div class="mt-2 text-sm font-medium text-green-600"${_scopeId2}> A new verification link has been sent to your email address. </div>`);
                     } else {
                       _push3(`<!---->`);
@@ -1081,7 +1076,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(`<p style="${ssrRenderStyle(unref(form).recentlySuccessful ? null : { display: "none" })}" class="text-sm text-neutral-600"${_scopeId2}>Saved.</p></div></form></div>`);
+                  _push3(`<p class="text-sm text-neutral-600" style="${ssrRenderStyle(unref(form).recentlySuccessful ? null : { display: "none" })}"${_scopeId2}>Saved.</p></div></form></div>`);
                   _push3(ssrRenderComponent(_sfc_main$1, null, null, _parent3, _scopeId2));
                 } else {
                   return [
@@ -1137,7 +1132,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             message: unref(form).errors.email
                           }, null, 8, ["message"])
                         ]),
-                        _ctx.mustVerifyEmail && !unref(user).email_verified_at ? (openBlock(), createBlock("div", { key: 0 }, [
+                        __props.mustVerifyEmail && !unref(user).email_verified_at ? (openBlock(), createBlock("div", { key: 0 }, [
                           createVNode("p", { class: "text-muted-foreground -mt-4 text-sm" }, [
                             createTextVNode(" Your email address is unverified. "),
                             createVNode(unref(Link), {
@@ -1152,7 +1147,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                               _: 1
                             }, 8, ["href"])
                           ]),
-                          _ctx.status === "verification-link-sent" ? (openBlock(), createBlock("div", {
+                          __props.status === "verification-link-sent" ? (openBlock(), createBlock("div", {
                             key: 0,
                             class: "mt-2 text-sm font-medium text-green-600"
                           }, " A new verification link has been sent to your email address. ")) : createCommentVNode("", true)
@@ -1245,7 +1240,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           message: unref(form).errors.email
                         }, null, 8, ["message"])
                       ]),
-                      _ctx.mustVerifyEmail && !unref(user).email_verified_at ? (openBlock(), createBlock("div", { key: 0 }, [
+                      __props.mustVerifyEmail && !unref(user).email_verified_at ? (openBlock(), createBlock("div", { key: 0 }, [
                         createVNode("p", { class: "text-muted-foreground -mt-4 text-sm" }, [
                           createTextVNode(" Your email address is unverified. "),
                           createVNode(unref(Link), {
@@ -1260,7 +1255,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             _: 1
                           }, 8, ["href"])
                         ]),
-                        _ctx.status === "verification-link-sent" ? (openBlock(), createBlock("div", {
+                        __props.status === "verification-link-sent" ? (openBlock(), createBlock("div", {
                           key: 0,
                           class: "mt-2 text-sm font-medium text-green-600"
                         }, " A new verification link has been sent to your email address. ")) : createCommentVNode("", true)

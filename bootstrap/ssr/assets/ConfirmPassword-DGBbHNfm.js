@@ -1,12 +1,12 @@
 import { defineComponent, mergeProps, withCtx, unref, createTextVNode, createBlock, createCommentVNode, openBlock, createVNode, withModifiers, useSSRContext } from "vue";
 import { ssrRenderComponent } from "vue/server-renderer";
-import { _ as _sfc_main$2, a as _sfc_main$4 } from "./Label-CHHcxqKF.js";
-import { _ as _sfc_main$5 } from "./AppLogoIcon-DBADkq_3.js";
-import { _ as _sfc_main$3 } from "./Input-DT0skB6D.js";
-import { _ as _sfc_main$1 } from "./AuthLayout-B9Y6kz4d.js";
+import { _ as _sfc_main$2, a as _sfc_main$4 } from "./Label-CLCUUhFf.js";
+import { _ as _sfc_main$5 } from "./AppLogoIcon-C4Tc7rVh.js";
+import { _ as _sfc_main$3 } from "./Input-3aSIPFbK.js";
+import { u as useRoutes } from "./useRoutes-C6epjGj-.js";
+import { _ as _sfc_main$1 } from "./AuthLayout-DzydXXdD.js";
 import { useForm, Head } from "@inertiajs/vue3";
 import { LoaderCircle } from "lucide-vue-next";
-import { u as useRoutes } from "./useRoutes-JSS26hLF.js";
 import "reka-ui";
 import "class-variance-authority";
 import "clsx";
@@ -38,7 +38,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           if (_push2) {
             _push2(ssrRenderComponent(unref(Head), { title: "Confirm password" }, null, _parent2, _scopeId));
             _push2(`<form${_scopeId}><div class="space-y-6"${_scopeId}><div class="grid gap-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$2), { htmlFor: "password" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "password" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Password`);
@@ -97,7 +97,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               }, [
                 createVNode("div", { class: "space-y-6" }, [
                   createVNode("div", { class: "grid gap-2" }, [
-                    createVNode(unref(_sfc_main$2), { htmlFor: "password" }, {
+                    createVNode(unref(_sfc_main$2), { for: "password" }, {
                       default: withCtx(() => [
                         createTextVNode("Password")
                       ]),

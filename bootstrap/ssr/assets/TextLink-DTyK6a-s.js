@@ -13,10 +13,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(Link), mergeProps({
-        href: _ctx.href,
-        tabindex: _ctx.tabindex,
-        method: _ctx.method,
-        as: _ctx.as,
+        href: __props.href,
+        tabindex: __props.tabindex,
+        method: __props.method,
+        as: __props.as,
         class: "text-foreground underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-out hover:decoration-current! dark:decoration-neutral-500"
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
