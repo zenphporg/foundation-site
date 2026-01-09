@@ -70,8 +70,7 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@': path.resolve(__dirname, './resources/js'),
         'ziggy-js': path.resolve('vendor/tightenco/ziggy'),
-        'zorah-js': path.resolve('vendor/zenphp/zorah/dist/index.js'),
-        zorah: path.resolve('vendor/zenphp/zorah/dist/vue.js'),
+        'zorah-js': path.resolve('vendor/zenphp/zorah/dist/index.esm.js')
       },
     },
   };

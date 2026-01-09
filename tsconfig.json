@@ -11,8 +11,7 @@
     "paths": {
       "@/*": ["./resources/js/*"],
       "ziggy-js": ["./vendor/tightenco/ziggy"],
-      "zorah-js": ["./vendor/zenphp/zorah/dist/index.js"],
-      "zorah": ["./vendor/zenphp/zorah/dist/vue.js"]
+      "zorah-js": ["./vendor/zenphp/zorah/dist/index.esm.js"]
     },
     "types": ["vite/client", "@vue/runtime-core", "./resources/js/types"],
     "resolveJsonModule": true,

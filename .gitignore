@@ -8,7 +8,6 @@
 /storage/pail
 /vendor
 .DS_Store
-bun.lock
 vitest.md
 .env
 .env.backup
