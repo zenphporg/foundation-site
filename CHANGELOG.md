@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/zenphporg/foundation-site/compare/v1.0.2...v1.0.3) (2026-01-09)
+
+
+### Bug Fixes
+
+* updates for dependency management ([fc35fc4](https://github.com/zenphporg/foundation-site/commit/fc35fc45e4777d2e5dc2ccd798f2cdfa57d26de7))
+
 ## [1.0.2](https://github.com/zenphporg/foundation-site/compare/v1.0.1...v1.0.2) (2025-10-23)
 
 
